@@ -21,7 +21,7 @@ const ConnectButton: React.FC = () => {
       <div className={`button-glitch absolute inset-0 bg-[#ff7700] opacity-0 ${
         isHovering ? 'animate-glitch' : ''
       }`}></div>
-      <span className="relative z-10 text-lg md:text-xl tracking-widest">CONNECT</span>
+      <span className="relative z-10 text-lg md:text-xl tracking-widest">CONNECT on STEAM</span>
     </button>
   );
 };
