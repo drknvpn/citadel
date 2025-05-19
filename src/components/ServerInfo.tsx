@@ -17,7 +17,7 @@ const ServerInfo: React.FC = () => {
     status: 'OFFLINE'
   });
   const [loading, setLoading] = useState(true);
-  const serverIP = "citadelhl2dm.ru:27223";
+  const serverIP = "46.174.48.48:27223";
 
   const gamemonitoringServerId = "8967211"; // ID вашего сервера в GameMonitoring
 
