@@ -10,27 +10,22 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-<!-- 1. Добавляем ID 'backgroundMusic' в audio-тег -->
-<audio id="backgroundMusic" autoplay loop>
+<audio id="backgroundMusic" loop>
   <source src="BlackMesa.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-  // 2. Улучшенный обработчик с проверкой элемента
-  document.addEventListener('click', function initAudio() {
-    const audio = document.getElementById('backgroundMusic');
-    
-    if (audio) { // Проверяем, что элемент найден
-      audio.play()
-        .then(() => console.log("Музыка запущена!"))
-        .catch(e => console.log("Ошибка воспроизведения:", e));
-    } else {
-      console.error("Аудио-элемент не найден! Проверьте ID.");
-    }
-    
-    // Удаляем обработчик после срабатывания
-    document.removeEventListener('click', initAudio);
-  });
+  const audio = document.getElementById('backgroundMusic');
+
+  // Функция для воспроизведения
+  function playAudio() {
+    audio.play()
+      .then(() => console.log("Музыка запущена!"))
+      .catch(e => console.log("Ошибка воспроизведения:", e));
+  }
+
+  // Запускаем при первом клике
+  document.addEventListener('click', playAudio, { once: true });
 </script>
 </body>
 </html>
