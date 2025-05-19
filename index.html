@@ -42,9 +42,17 @@
   });
 </script>
 <style>
-  body {
-    cursor: url('mont.png'), auto;
-  }
-</style>
+    body {
+      cursor: url('mont.png'), auto;
+    }
+    /* Для всех кнопок */
+    button {
+      cursor: inherit !important;
+    }
+    /* ИЛИ для всех кликабельных элементов */
+    a, button, [onclick], [role="button"] {
+      cursor: inherit !important;
+    }
+  </style>
 </body>
 </html>
