@@ -11,7 +11,7 @@ const Terminal: React.FC = () => {
   useEffect(() => {
     const bootSequence = async () => {
       const bootupMessages = [
-        '> Initializing Black Mesa terminal...',
+        '> Initializing Citadel terminal...',
         '> Loading security protocols...',
         '> Establishing connection to Citadel network...',
         '> Connection established.',
