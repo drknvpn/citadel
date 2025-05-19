@@ -6,7 +6,7 @@ const ConnectButton: React.FC = () => {
   
   const handleConnect = () => {
     // steam://connect/IP:PORT format for Steam's browser protocol
-    window.location.href = `steam://connect/${serverIP}`;
+    window.location.href = `steam://run/320//connect/${serverIP}`;
   };
 
   return (
