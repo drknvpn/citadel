@@ -38,7 +38,7 @@ const Terminal: React.FC = () => {
     >
       <div className="terminal-header border-b border-[#ff7700]/30 pb-2 mb-4 flex justify-between items-center">
         <div className="terminal-title text-[#ff7700] font-mono text-sm md:text-base">
-          Black Mesa Terminal v2.3.5
+          Black Mesa Terminal v2.3.5 [NoSteam]
         </div>
         <div className="terminal-status flex items-center">
           <div className="h-2 w-2 md:h-3 md:w-3 rounded-full bg-[#4AAE4C] mr-2"></div>
