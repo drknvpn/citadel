@@ -17,15 +17,29 @@
 <script>
   const audio = document.getElementById('backgroundMusic');
 
-  // Функция для воспроизведения
   function playAudio() {
     audio.play()
       .then(() => console.log("Музыка запущена!"))
       .catch(e => console.log("Ошибка воспроизведения:", e));
   }
 
-  // Запускаем при первом клике
-  document.addEventListener('click', playAudio, { once: true });
+  // Сначала пробуем запустить без клика (может не сработать)
+  audio.play().catch(() => {
+    console.log("Автовоспроизведение заблокировано, пытаемся обойти...");
+    
+    // Создаем и инициируем искусственный клик
+    const fakeClick = new MouseEvent('click', {
+      bubbles: true,
+      cancelable: true,
+      view: window
+    });
+    
+    // Имитируем клик по документу
+    document.dispatchEvent(fakeClick);
+    
+    // На всякий случай добавляем обработчик на настоящий клик
+    document.addEventListener('click', playAudio, { once: true });
+  });
 </script>
 </body>
 </html>
