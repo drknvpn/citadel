@@ -1,13 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-// В начале страницы
-const unlockAudio = new Audio(); 
-unlockAudio.src = 'data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YU...'; // 0.5 сек тишины
-unlockAudio.play().then(() => {
-  // Теперь backgroundMusic сможет играть
-});
-    <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CITADEL HL2DM SERVER</title>
@@ -19,5 +13,15 @@ unlockAudio.play().then(() => {
 <audio autoplay loop>
   <source src="BlackMesa.mp3" type="audio/mpeg">
 </audio>
+<script>
+  // Ждём первого клика пользователя по странице
+  document.addEventListener('click', function() {
+    const audio = document.getElementById('backgroundMusic');
+    // Пробуем запустить музыку
+    audio.play().catch(e => console.log("Ошибка:", e));
+    // Удаляем обработчик после первого клика
+    document.removeEventListener('click', arguments.callee);
+  });
+</script>
 </body>
 </html>
