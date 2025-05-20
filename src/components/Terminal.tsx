@@ -61,7 +61,7 @@ const Terminal: React.FC = () => {
           </div>
           <div className="terminal-footer mt-8 text-xs text-gray-500 text-center">
             <a href="https://vk.me/join/nH_j178ollsY3bbssUupHWZA/ZUthSoAWII=">Talk in VK</a> | <a href="https://vk.com/citadelhl2dm">VK group</a>
-            <p className="mt-1">© 2025 Citadel Research Facility. All rights reserved.</p>
+            <p className="mt-1">© 2025 Citadel. Sleep well, defenders of Russia 🕊️</p>
           </div>
         </div>
       )}
