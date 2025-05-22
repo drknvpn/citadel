@@ -12,7 +12,6 @@ interface ServerData {
 const ServerInfo: React.FC = () => {
   const [serverData, setServerData] = useState<ServerData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [showInstallGuide, setShowInstallGuide] = useState(false);
   const serverIP = "citadelhl2dm.ru:27223";
 
   useEffect(() => {
@@ -102,28 +101,6 @@ const ServerInfo: React.FC = () => {
             <p>2. Open console (~)</p>
             <p>3. Type: <span className="text-[#ff7700] select-all">connect {serverIP}</span></p>
             <p>4. Press Enter</p>
-          </div>
-        </div>
-
-        <div className="info-row">
-          <div className="flex items-center text-green-400">
-            <ChevronRight className="h-4 w-4 mr-2" />
-            <span className="font-mono">Server maps, hud, icons:</span>
-          </div>
-          <div className="mt-1 bg-black/70 border border-green-500/30 p-3 font-mono text-gray-300 text-sm">
-            <p>1. Go to: <span className="text-[#ff7700]">hl2mp\custom\bruss.org\resource</span></p>
-            <p>• Delete all files in this folder (keep folder)</p>
-            <p>2. Rename <span className="text-[#ff7700]">bruss.org</span> to <span className="text-[#ff7700]">CITADEL OLD</span></p>
-            <p>3. From archive:</p>
-            <p>• Copy <span className="text-[#ff7700]">custom</span> to <span className="text-[#ff7700]">hl2mp\custom</span></p>
-            <p>• Copy <span className="text-[#ff7700]">maps</span> to <span className="text-[#ff7700]">hl2mp\maps</span></p>
-            
-            <div className="mt-4 flex justify-center">
-              <a href="/path/to/your/files.zip" 
-                 className="bg-[#ff7700] hover:bg-[#ff6600] text-black font-mono px-4 py-2 rounded border border-[#ff7700] transition-colors duration-200">
-                DOWNLOAD FILES
-              </a>
-            </div>
           </div>
         </div>
       </div>
