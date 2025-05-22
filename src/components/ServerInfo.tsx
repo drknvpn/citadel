@@ -108,7 +108,7 @@ const ServerInfo: React.FC = () => {
         <div className="info-row">
           <div className="flex items-center text-green-400">
             <ChevronRight className="h-4 w-4 mr-2" />
-            <span className="font-mono">Installation:</span>
+            <span className="font-mono">Server maps, hud, icons:</span>
           </div>
           <div className="mt-1 bg-black/70 border border-green-500/30 p-3 font-mono text-gray-300 text-sm">
             <p>1. Go to: <span className="text-[#ff7700]">hl2mp\custom\bruss.org\resource</span></p>
