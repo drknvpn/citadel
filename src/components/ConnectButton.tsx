@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const ConnectButton: React.FC = () => {
   const [isHovering, setIsHovering] = useState(false);
-  const serverIP = "citadelhl2dm.ru:27223";
+  const serverIP = "citadelhl2dm.ru:27226";
   
   const handleConnect = () => {
     // steam://connect/IP:PORT format for Steam's browser protocol
