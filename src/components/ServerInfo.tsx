@@ -18,7 +18,7 @@ const ServerInfo: React.FC = () => {
     const fetchServerData = async () => {
       try {
         setLoading(true);
-        const response = await fetch('https://api.gamemonitoring.ru/servers/8967211');
+        const response = await fetch('https://api.gamemonitoring.ru/servers/10399018');
         const data = await response.json();
         
         if (data && data.response) {
