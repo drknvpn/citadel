@@ -12,7 +12,7 @@ interface ServerData {
 const ServerInfo: React.FC = () => {
   const [serverData, setServerData] = useState<ServerData | null>(null);
   const [loading, setLoading] = useState(true);
-  const serverIP = "citadelhl2dm.ru:27226";
+  const serverIP = "46.174.48.48:27226";
 
   useEffect(() => {
     const fetchServerData = async () => {
